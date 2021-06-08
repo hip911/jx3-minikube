@@ -45,7 +45,7 @@ data:
         repos:
         - hip911/jx3-minikube
         - hip911/jx3-quickstart-python-http
-      target_url: http://dashboard-jx.
+      target_url: http://dashboard-jx.k8s.gaborcsikos.xyz
 kind: ConfigMap
 metadata:
   creationTimestamp: null
