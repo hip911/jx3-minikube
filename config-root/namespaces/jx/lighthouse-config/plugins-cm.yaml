@@ -6,6 +6,10 @@ data:
       repos:
       - hip911/jx3-minikube
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - hip911/jx3-quickstart-python-http
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -19,6 +23,9 @@ data:
       hip911/jx3-minikube:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
+      hip911/jx3-quickstart-python-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
     heart: {}
     label:
       additional_labels: null
@@ -26,6 +33,22 @@ data:
     plugins:
       hip911/jx3-minikube:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      hip911/jx3-quickstart-python-http:
       - approve
       - assign
       - blunderbuss
@@ -53,6 +76,11 @@ data:
     - repos:
       - hip911/jx3-minikube
       trusted_org: todo
+    - repos:
+      - hip911/jx3-quickstart-python-http
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

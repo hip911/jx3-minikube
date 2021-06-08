@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: hip911
+    provider: github
+    repository: jx3-quickstart-python-http
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: hip911-jx3-quickstart-python-http
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/hip911/jx3-quickstart-python-http.git
+  org: hip911
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-quickstart-python-http
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/hip911/jx3-quickstart-python-http
