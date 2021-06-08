@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: jx3-angular-io
     - name: jx3-quickstart-python-http
     scheduler: in-repo
   slack:
